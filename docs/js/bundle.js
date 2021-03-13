@@ -2240,7 +2240,7 @@ i++;}else{decoded+=c;}}return decoded;};Code39Reader.ALPHABET_STRING='0123456789
 var _this=_super!==null&&_super.apply(this,arguments)||this;// Stores the actual narrow line width of the image being decoded.
 _this.narrowLineWidth=-1;return _this;}// See ITFWriter.PATTERNS
 /*
-
+    
       /!**
        * Patterns of Wide / Narrow lines to indicate each digit
        *!/
@@ -4456,13 +4456,13 @@ return new ModulusPoly(this.field,new Int32Array([0]));}var aCoefficients=this.c
         if (other.isZero()) {
           throw new IllegalArgumentException("Divide by 0");
         }
-
+    
         let quotient: ModulusPoly = field.getZero();
         let remainder: ModulusPoly = this;
-
+    
         let denominatorLeadingTerm: /*int/ number = other.getCoefficient(other.getDegree());
         let inverseDenominatorLeadingTerm: /*int/ number = field.inverse(denominatorLeadingTerm);
-
+    
         while (remainder.getDegree() >= other.getDegree() && !remainder.isZero()) {
           let degreeDifference: /*int/ number = remainder.getDegree() - other.getDegree();
           let scale: /*int/ number = field.multiply(remainder.getCoefficient(remainder.getDegree()), inverseDenominatorLeadingTerm);
@@ -4471,7 +4471,7 @@ return new ModulusPoly(this.field,new Int32Array([0]));}var aCoefficients=this.c
           quotient = quotient.add(iterationQuotient);
           remainder = remainder.subtract(term);
         }
-
+    
         return new ModulusPoly[] { quotient, remainder };
       }
       */ // @Override
@@ -6795,7 +6795,7 @@ for(let inputX=0,outputX=leftPadding;inputX<inputWidth;inputX++,outputX+=multipl
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -6808,14 +6808,14 @@ for(let inputX=0,outputX=leftPadding;inputX<inputWidth;inputX++,outputX+=multipl
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -6828,7 +6828,7 @@ for(let inputX=0,outputX=leftPadding;inputX<inputWidth;inputX++,outputX+=multipl
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -6840,7 +6840,7 @@ for(let inputX=0,outputX=leftPadding;inputX<inputWidth;inputX++,outputX+=multipl
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -6852,12 +6852,12 @@ for(let inputX=0,outputX=leftPadding;inputX<inputWidth;inputX++,outputX+=multipl
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -6868,7 +6868,7 @@ for(let inputX=0,outputX=leftPadding;inputX<inputWidth;inputX++,outputX+=multipl
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
@@ -6944,7 +6944,7 @@ window.addEventListener('load', function () { return __awaiter(void 0, void 0, v
                         var mod = total % 11;
                         var checksum = (mod === 0) ? 0 : 11 - mod;
                         var isbn10 = segment + (checksum === 10 ? 'X' : checksum.toString());
-                        window.open("https://www.amazon.co.jp/dp/" + isbn10);
+                        location.href = "https://www.amazon.co.jp/dp/" + isbn10;
                     })];
             case 2:
                 controls = _a.sent();
