@@ -6928,7 +6928,7 @@ window.addEventListener('load', function () { return __awaiter(void 0, void 0, v
                 videoInputDevices = _a.sent();
                 video = document.querySelector('video#test');
                 reader = new _zxing_browser__WEBPACK_IMPORTED_MODULE_0__.BrowserMultiFormatOneDReader();
-                return [4 /*yield*/, reader.decodeFromVideoDevice(videoInputDevices[0].deviceId, video, function (result, error, controls) {
+                return [4 /*yield*/, reader.decodeFromVideoDevice(videoInputDevices[1].deviceId, video, function (result, error, controls) {
                         if (!result) {
                             return;
                         }
