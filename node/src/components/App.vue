@@ -34,6 +34,14 @@ export default Vue.extend({
         },
         async get_devices() {
             this.devices = await BrowserCodeReader.listVideoInputDevices();
+
+            if (this.devices.length === 0) {
+                alert("カメラが見つかりません");
+            } else if (this.devices.length === 1) {
+                this.device_index = 0;
+            } else {
+                this.device_index = 1;
+            }
         },
         async start() {
             this.control = await this.reader.decodeFromVideoDevice(this.devices[this.device_index].deviceId, this.$refs.video, (result, error, controls) => {

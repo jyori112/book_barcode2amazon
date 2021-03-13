@@ -35262,6 +35262,15 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
                             return [4 /*yield*/, _zxing_browser__WEBPACK_IMPORTED_MODULE_0__.BrowserCodeReader.listVideoInputDevices()];
                         case 1:
                             _a.devices = _b.sent();
+                            if (this.devices.length === 0) {
+                                alert("カメラが見つかりません");
+                            }
+                            else if (this.devices.length === 1) {
+                                this.device_index = 0;
+                            }
+                            else {
+                                this.device_index = 1;
+                            }
                             return [2 /*return*/];
                     }
                 });
