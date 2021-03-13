@@ -35249,6 +35249,9 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
         };
     },
     methods: {
+        reset: function () {
+            this.amazon_url = null;
+        },
         get_devices: function () {
             return __awaiter(this, void 0, void 0, function () {
                 var _a;
@@ -35436,6 +35439,12 @@ var render = function() {
                   attrs: { href: _vm.amazon_url, role: "button" }
                 },
                 [_vm._v("Amazon.co.jp")]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                { staticClass: "mt-1 btn btn-link", on: { click: _vm.reset } },
+                [_vm._v("もう一度")]
               )
             ])
           ]

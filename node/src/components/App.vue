@@ -6,6 +6,7 @@
         <div class="fixed-bottom bg-light border-top row justify-content-center" v-if="amazon_url">
             <div class="col-8 text-center py-5">
                 <a :href="amazon_url" class="btn btn-primary btn-lg btn-block w-100" role="button">Amazon.co.jp</a>
+                <a @click="reset" class="mt-1 btn btn-link">もう一度</a>
             </div>
         </div>
     </div>
@@ -28,6 +29,9 @@ export default Vue.extend({
         }
     },
     methods: {
+        reset() {
+            this.amazon_url = null;
+        },
         async get_devices() {
             this.devices = await BrowserCodeReader.listVideoInputDevices();
         },
