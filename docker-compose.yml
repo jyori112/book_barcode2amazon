@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8001:80
+    volumes:
+      - ./nginx/html:/usr/share/nginx/html
+
+  node:
+    build: ./node
+    volumes:
+      - ./node:/home/jin/app
+      - ./nginx/html/dist:/home/jin/dist
