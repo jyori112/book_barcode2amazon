@@ -10,7 +10,7 @@ window.addEventListener('load', async () => {
 
     const reader = new BrowserMultiFormatOneDReader();
 
-    const controls = await reader.decodeFromVideoDevice(videoInputDevices[0].deviceId, video, (result, error, controls) => {
+    const controls = await reader.decodeFromVideoDevice(videoInputDevices[1].deviceId, video, (result, error, controls) => {
         if (!result) {
             return;
         }
